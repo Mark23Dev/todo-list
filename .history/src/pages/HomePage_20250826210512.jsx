@@ -6,7 +6,7 @@ import CompletedTasks from "../components/CompletedTasks";
 
 const HomePage = () => {
   return (
-    <div className="main flex w-full flex-col mt-2 mx-3">
+    <div className="main flex w-full flex-col mt-2 mr-4">
       <div className="heading flex w-full justify-between">
         <div className="">
           <h2 className="text-black text-3xl font-bold">Welcome back Sundar</h2>

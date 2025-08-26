@@ -1,7 +1,6 @@
 import HomePage from "./pages/HomePage"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MainLayout from "./layouts/MainLayout"
-import TaskPage from "./pages/TaskPage"
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/my-tasks" element={<TaskPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

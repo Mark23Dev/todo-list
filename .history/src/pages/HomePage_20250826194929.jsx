@@ -1,3 +1,6 @@
+import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
+import DashBoard from "../components/Dashboard";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaClipboard, FaPlus } from "react-icons/fa";
 import Card from "../components/Card";
@@ -6,7 +9,7 @@ import CompletedTasks from "../components/CompletedTasks";
 
 const HomePage = () => {
   return (
-    <div className="main flex w-full flex-col mt-2 mx-3">
+    <div className="main flex w-full flex-col mt-2 mr-10">
       <div className="heading flex w-full justify-between">
         <div className="">
           <h2 className="text-black text-3xl font-bold">Welcome back Sundar</h2>
