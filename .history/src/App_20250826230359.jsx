@@ -2,7 +2,6 @@ import HomePage from "./pages/HomePage"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MainLayout from "./layouts/MainLayout"
 import TaskPage from "./pages/TaskPage"
-import VitalTasks from "./pages/VitalTasks"
 
 function App() {
   return (

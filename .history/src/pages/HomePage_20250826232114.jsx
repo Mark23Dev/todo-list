@@ -3,12 +3,13 @@ import { FaClipboard, FaPlus } from "react-icons/fa";
 import Card from "../components/Card";
 import TaskStatus from "../components/TaskStatus";
 import CompletedTasks from "../components/CompletedTasks";
-import AddTaskModal from "../components/AddTaskModal";
-import { ShowForm } from "../useStore";
+import { useState } from "react";
 
 const HomePage = () => {
-const { showForm, handleForm } = ShowForm();
-
+  const [invite, setInvite] = useState(false);
+  const handleInvite = () => {
+    setInvite(prev => !prev);
+  };
 
   return (
     <div className="main flex w-full flex-col mt-2 mx-3">
@@ -24,11 +25,10 @@ const { showForm, handleForm } = ShowForm();
             <img className="w-6 h-6 rounded-md object-cover" src="https://randomuser.me/api/portraits/women/1.jpg" alt="" />
             <img className="w-6 h-6 rounded-md object-cover" src="https://randomuser.me/api/portraits/women/1.jpg" alt="" />
           </div>
-          <button onClick={handleForm} className="flex gap-2 items-center justify-center text-sm py-1 px-2 hover:bg-red-500/80 hover:text-white hover:shadow-2xl text-red-500/80  rounded-md border-[1px] border-red-500/80">
+          <button onClick={handleInvite} className="flex gap-2 items-center justify-center text-sm py-1 px-2 hover:bg-red-500/80 hover:text-white hover:shadow-2xl text-red-500/80  rounded-md border-[1px] border-red-500/80">
             <FaPeopleGroup />
             Invite
           </button>
-          {showForm && <AddTaskModal showForm={showForm} />}
         </div>
       </div>
       <div className="flex justify-between w-full h-full border-[1px] border-gray-500/80 shadow-4xl shadow-gray-900 my-5">

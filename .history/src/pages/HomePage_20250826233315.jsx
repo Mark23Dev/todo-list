@@ -3,12 +3,13 @@ import { FaClipboard, FaPlus } from "react-icons/fa";
 import Card from "../components/Card";
 import TaskStatus from "../components/TaskStatus";
 import CompletedTasks from "../components/CompletedTasks";
-import AddTaskModal from "../components/AddTaskModal";
-import { ShowForm } from "../useStore";
+import { useState } from "react";
 
 const HomePage = () => {
-const { showForm, handleForm } = ShowForm();
-
+  const [showForm, setShowForm] = useState(false);
+  const handleForm = () => {
+    setShowForm(prev => !prev);
+  };
 
   return (
     <div className="main flex w-full flex-col mt-2 mx-3">
@@ -28,7 +29,13 @@ const { showForm, handleForm } = ShowForm();
             <FaPeopleGroup />
             Invite
           </button>
-          {showForm && <AddTaskModal showForm={showForm} />}
+          <div className="invite-form flex flex-col absolute top-30 right-[30%] z-200 fixed bg-white border-[1px] border-gray-500/80 w-60 h-80">
+            <div className="header">
+              <span>Send an invite to a new member</span>
+              <span onClick={handleForm} className="cursor-pointer">Go Back</span>
+            </div>
+            <div className="card"></div>
+          </div>
         </div>
       </div>
       <div className="flex justify-between w-full h-full border-[1px] border-gray-500/80 shadow-4xl shadow-gray-900 my-5">

@@ -3,11 +3,14 @@ import { FaClipboard, FaPlus } from "react-icons/fa";
 import Card from "../components/Card";
 import TaskStatus from "../components/TaskStatus";
 import CompletedTasks from "../components/CompletedTasks";
+import { useState } from "react";
 import AddTaskModal from "../components/AddTaskModal";
-import { ShowForm } from "../useStore";
 
 const HomePage = () => {
-const { showForm, handleForm } = ShowForm();
+  const [showForm, setShowForm] = useState(false);
+  const ShowForm = () => {
+    setShowForm(!showForm);
+  };
 
 
   return (
@@ -24,7 +27,7 @@ const { showForm, handleForm } = ShowForm();
             <img className="w-6 h-6 rounded-md object-cover" src="https://randomuser.me/api/portraits/women/1.jpg" alt="" />
             <img className="w-6 h-6 rounded-md object-cover" src="https://randomuser.me/api/portraits/women/1.jpg" alt="" />
           </div>
-          <button onClick={handleForm} className="flex gap-2 items-center justify-center text-sm py-1 px-2 hover:bg-red-500/80 hover:text-white hover:shadow-2xl text-red-500/80  rounded-md border-[1px] border-red-500/80">
+          <button onClick={ShowForm} className="flex gap-2 items-center justify-center text-sm py-1 px-2 hover:bg-red-500/80 hover:text-white hover:shadow-2xl text-red-500/80  rounded-md border-[1px] border-red-500/80">
             <FaPeopleGroup />
             Invite
           </button>
