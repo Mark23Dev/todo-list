@@ -5,7 +5,6 @@ import TaskStatus from "../components/TaskStatus";
 import CompletedTasks from "../components/CompletedTasks";
 import AddMemberModal from "../components/AddMemberModal";
 import { useShowForm } from "../useStore";
-import AddTaskModal from "../components/AddTaskModal";
 
 const HomePage = () => {
 const { activeForm, openForm } = useShowForm();
@@ -29,7 +28,7 @@ const { activeForm, openForm } = useShowForm();
             <FaPeopleGroup />
             Invite
           </button>
-          {activeForm ==="add-member" && <AddMemberModal />}
+          {showForm && <AddMemberModal showForm={showForm} />}
         </div>
       </div>
       <div className="flex justify-between w-full h-full border-[1px] border-gray-500/80 shadow-4xl shadow-gray-900 my-5">
@@ -40,11 +39,10 @@ const { activeForm, openForm } = useShowForm();
                 <FaClipboard />
                 <span>To-Do</span>
               </div>
-              <div onClick={()=>openForm("add-task")} className="add-task flex">
+              <div onClick={handleForm} className="add-task flex">
                 <FaPlus />
                 <span>Add Task</span>
               </div>
-              {activeForm ==="add-task" && <AddTaskModal />}
             </div>
 
             <div className="cards">

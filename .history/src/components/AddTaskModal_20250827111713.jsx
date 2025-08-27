@@ -43,7 +43,7 @@ const AddTaskModal = () => {
           
         </div>
         <div className="footer flex justify-end m-3">
-          <button onClick={closeForm} className="bg-red-500/80 hover:bg-red-600/80 text-white text-sm py-1 px-3 rounded-sm">Add Task</button>
+          <button onClick={closeForm} className="bg-red-500/80 hover:bg-red-600/80 text-white text-sm py-1 px-3 rounded-md">Add Task</button>
         </div>
       </div>
 

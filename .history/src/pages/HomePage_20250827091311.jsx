@@ -5,7 +5,6 @@ import TaskStatus from "../components/TaskStatus";
 import CompletedTasks from "../components/CompletedTasks";
 import AddMemberModal from "../components/AddMemberModal";
 import { useShowForm } from "../useStore";
-import AddTaskModal from "../components/AddTaskModal";
 
 const HomePage = () => {
 const { activeForm, openForm } = useShowForm();

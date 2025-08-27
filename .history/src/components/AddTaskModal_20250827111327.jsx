@@ -33,7 +33,7 @@ const AddTaskModal = () => {
           <div className="flex justify-between gap-3">
             <div className="task-description flex flex-col">
               <p className="font-bold">Task Description</p>
-              <textarea className="border-[1px] w-80 h-30 border-gray-500/80 rounded-sm mt-2 p-1 resize-none" placeholder="Start writing here..."></textarea>
+              <textarea className="border-[1px] flex-1 h-30 border-gray-500/80 rounded-sm mt-2 p-1 resize-none" placeholder="Start writing here..."></textarea>
             </div>
             <div className="upload-image flex flex-col">
               <p className="font-bold">Upload Image</p>
@@ -41,9 +41,6 @@ const AddTaskModal = () => {
             </div>
           </div>
           
-        </div>
-        <div className="footer flex justify-end m-3">
-          <button onClick={closeForm} className="bg-red-500/80 hover:bg-red-600/80 text-white text-sm py-1 px-3 rounded-sm">Add Task</button>
         </div>
       </div>
 
